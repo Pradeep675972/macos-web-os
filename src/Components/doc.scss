@@ -1,0 +1,60 @@
+.doc{
+    display: flex ;
+    gap: 10px;
+    position: absolute;
+    left: 50%;
+    bottom: -1rem;
+    transform: translate(-50%,-50%);
+background-color: rgba(63, 63, 63, 0.361);
+padding-inline: .5rem;
+padding-block: .5rem;
+border-radius: .75rem;
+filter: blur(.75px);
+    .icon{  
+        width: 2.5rem;
+        padding: 0.1rem;
+        display: flex;  
+        border-radius: .5rem;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.1s ease-in-out;
+        
+    }
+
+    .githubm,.cli{
+        background-color: #000;
+      
+    }
+    .note{
+        background: linear-gradient(to bottom,rgb(255,179,87),rgb(255,153,28) );
+    }
+    .pdf{
+background: linear-gradient(to bottom,rgb(255,65,78),rgb(255,29,44) );
+
+    }
+
+    .calender,.mail{
+background: linear-gradient(to bottom,rgb(105,94,255),rgb(66,52,255) );
+    }
+
+    .spotify{
+        background: linear-gradient(to bottom, rgb(34, 87, 9) ,rgb(26, 248, 52));
+    
+    }
+    .link{
+        background: linear-gradient(to bottom ,rgb(163,97,170),rgb(142,33,170));
+    }
+
+
+    .icon:hover{
+transform: scale(1.30) translateY(-50%);
+    }
+
+
+    .icon:hover +.icon,   //next wala icon ko sclae change
+    .icon:has(+.icon:hover){   //has is used for the selecting of parent 
+        
+        transform: scale(1) translateY(-30%);
+
+    }
+}

@@ -1,0 +1,81 @@
+.window{
+   height: 100%;
+    background-color: black;
+    border-radius: .75rem;
+    overflow: hidden;
+
+    color: rgb(168,168,168);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+
+
+    p{
+        font-size:1.1rem;
+    }
+
+    .nav{
+        padding-inline: .75rem;
+        padding-block: .2rem;
+        display: flex;
+        gap: 1.5rem;
+        align-items: center;
+        border-bottom: 1px solid rgba(245, 245, 245, 0.402);
+
+
+        .dots{
+        display: flex;
+        gap: 0.25rem;
+
+
+         .dot{
+        height: 12px;
+        width: 12px;
+        border-radius: 50%;
+        background-color: white;
+        transition: all 0.2s ease;
+
+    }
+    .red{
+            background-color: #eb3535;
+            cursor: pointer;
+            
+            &:hover {
+                background-color: #ff5555;
+                transform: scale(1.2);
+            }
+        }
+        .yellow{
+            cursor: pointer;
+            background-color: rgb(247, 247, 81);
+            
+            &:hover {
+                background-color: rgb(255, 255, 100);
+                transform: scale(1.2);
+            }
+        }
+        .green{
+            cursor: pointer;
+            background-color: rgb(27, 288, 0);
+            
+            &:hover {
+                background-color: rgb(50, 255, 50);
+                transform: scale(1.2);
+            }
+    }
+   
+    }
+}
+
+
+
+
+.main-content{
+height: 100%;
+
+}
+
+*::-webkit-scrollbar{
+    width: 8px;
+    background-color: rgba(128, 128, 128, 0.258);
+}
+}
