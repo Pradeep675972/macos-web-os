@@ -9,11 +9,20 @@ const Navbar = () => {
           <img src="./navbar-icons/apple.svg" alt="Apple Icon" />
         </div>
         <div className="nav-item">
-          <p>Masood </p>
+          <p>Pradeep </p>
         </div>
 
         <div className="nav-item">
           <p>File</p>
+        </div>
+              <div className="nav-item">
+          <p>Edit</p>
+        </div>
+              <div className="nav-item">
+          <p>View</p>
+        </div>
+              <div className="nav-item">
+          <p>History</p>
         </div>
 
         <div className="nav-item">
@@ -22,6 +31,10 @@ const Navbar = () => {
 
         <div className="nav-item">
           <p>Terminal</p>
+        </div>
+
+              <div className="nav-item">
+          <p>Help</p>
         </div>
       </div>
 

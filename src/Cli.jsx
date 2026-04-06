@@ -2,21 +2,24 @@ import React from 'react'
 import Macwindow from './Components/Windows/Macwindow'
 import Terminal from 'react-console-emulator'
 
-const Cli = ({windowName, setwindowstate}) => {
+const Cli = ({ windowName, setwindowstate }) => {
+
   const commands = {
-  
+
     whoami: {
       description: 'Display current user information',
       usage: 'whoami',
       fn: () => `
 ┌─ User Information ─────────────────────────────┐
-│ Username: masood                               │
-│ Role: Full Stack Developer                     │
-│ Location: Earth                                │
-│ Status: Open for opportunities 🚀             │
+│ Name: Pradeep Rathore                         │
+│ Role: Full Stack Developer                    │
+│ Education: B.Tech CSE (AI & ML)               │
+│ Location: India                               │
+│ Status: Open for Internship 🚀                │
 └────────────────────────────────────────────────┘
       `
     },
+
     about: {
       description: 'Learn about me',
       usage: 'about',
@@ -25,16 +28,19 @@ const Cli = ({windowName, setwindowstate}) => {
 ║                    About Me                           ║
 ╚════════════════════════════════════════════════════════╝
 
-Hi! I'm a passionate full-stack developer with expertise in:
-• Building modern web applications
-• Crafting beautiful user interfaces
-• Writing clean and maintainable code
-• Problem solving and system design
+I am a self-motivated Computer Science student pursuing B.Tech in
+Artificial Intelligence & Machine Learning.
 
-I love turning ideas into reality through code and
-continuously learning new technologies.
+• Strong in Java, JavaScript & Full Stack Development
+• Experience in React.js, Node.js, MongoDB
+• Passionate about building scalable web applications
+• Problem solver with good teamwork & communication skills
+
+I love creating real-world applications and continuously learning
+new technologies 🚀
       `
     },
+
     projects: {
       description: 'View all projects',
       usage: 'projects',
@@ -43,29 +49,22 @@ continuously learning new technologies.
 ║                   My Projects                         ║
 ╚════════════════════════════════════════════════════════╝
 
-1. 📊 Scheds - Course Schedule Generator
-   Stack: ASP.NET Core, C#, SQL Server
-   Repo: github.com/yourname/scheds
+1. 🏥 Doctor Appointment Booking System
+   Stack: React, Node.js, Express, MongoDB, JWT, Redux
+   • Secure login system for doctors & patients
+   • Dynamic doctor profiles & scheduling
+   • Admin panel with user & appointment management
 
-2. 💰 FinTrack - Personal Finance Dashboard
-   Stack: React, TypeScript, Node.js
-   Repo: github.com/yourname/fintrack
+2. 💻 macOS Inspired UI Clone
+   Stack: React, JavaScript, HTML, CSS
+   • macOS-style desktop interface
+   • Dock, window animations, responsive design
+   • Smooth UI interactions & reusable components
 
-3. 🔐 SecureAuth - Backend Identity Service
-   Stack: Python, Django, PostgreSQL
-   Repo: github.com/yourname/secureauth
-
-4. 💬 ChatStream - Real-time Messaging App
-   Stack: Vue.js, Firebase, Socket.io
-   Repo: github.com/yourname/chatstream
-
-5. ⚙️  TerminalX - CLI Productivity Tool
-   Stack: Rust, Tokio
-   Repo: github.com/yourname/terminalx
-
-Use 'projects -v' for verbose details
+(Add your GitHub links here)
       `
     },
+
     skills: {
       description: 'Display technical skills',
       usage: 'skills',
@@ -74,29 +73,34 @@ Use 'projects -v' for verbose details
 ║              Technical Skills                         ║
 ╚════════════════════════════════════════════════════════╝
 
+Programming:
+  • Core Java
+  • JavaScript
+  • SQL
+
 Frontend:
-  • React.js (95%)
-  • Next.js (90%)
-  • TypeScript (85%)
-  • Tailwind CSS (90%)
-  • Vue.js (70%)
+  • React.js
+  • HTML, CSS
+  • Tailwind CSS
 
 Backend:
-  • Node.js (90%)
-  • Python (85%)
-  • Django (80%)
-  • ASP.NET Core (85%)
-  • Rust (70%)
+  • Node.js
+  • Express.js
 
-Databases & Tools:
-  • PostgreSQL (85%)
-  • MongoDB (80%)
-  • Docker (80%)
-  • Redis (75%)
-  • AWS (80%)
-  • Git (95%)
+Database:
+  • MongoDB
+  • MySQL, PostgreSQL, SQL Server
+
+Tools:
+  • Git & GitHub
+
+Soft Skills:
+  • Teamwork
+  • Communication
+  • Problem Solving
       `
     },
+
     contact: {
       description: 'Get contact information',
       usage: 'contact',
@@ -105,15 +109,15 @@ Databases & Tools:
 ║              Contact Information                      ║
 ╚════════════════════════════════════════════════════════╝
 
-📧 Email: masood@example.com
-💼 LinkedIn: linkedin.com/in/masood
-🐙 GitHub: github.com/masood
-🐦 Twitter: @masood_dev
-🌐 Website: masood.dev
+📧 Email: pradeeprathore877@gmail.com
+📱 Phone: 9752264618
+💼 LinkedIn: https://www.linkedin.com/in/pradeep-rathore-95440137b/
+🐙 GitHub: https://github.com/Pradeep675972
 
-Let's connect and build something amazing together! 🚀
+Let's connect and build something amazing 🚀
       `
     },
+
     social: {
       description: 'Display social media links',
       usage: 'social',
@@ -122,27 +126,38 @@ Let's connect and build something amazing together! 🚀
 ║              Social Media                             ║
 ╚════════════════════════════════════════════════════════╝
 
-👥 GitHub:    github.com/masood
-📘 LinkedIn:  linkedin.com/in/masood
-🐦 Twitter:   twitter.com/masood_dev
-📷 Instagram: instagram.com/masood_dev
-💼 Portfolio: masood.dev
+👥 GitHub:    https://github.com/Pradeep675972
+📘 LinkedIn:  https://www.linkedin.com/in/pradeep-rathore-95440137b/
       `
     },
-    ls: {
-      description: 'List portfolio contents',
-      usage: 'ls',
-      fn: () => `
-📁 ~/portfolio/
-├── 📁 projects/
-├── 📁 skills/
-├── 📁 experience/
-├── 📄 about.md
-└── 📄 resume.pdf
 
-Use 'cd <folder>' to navigate
+    education: {
+      description: 'View education details',
+      usage: 'education',
+      fn: () => `
+🎓 B.Tech CSE (AI & ML)
+Lakshmi Narain College of Technology, Bhopal
+CGPA: 7.87 (2022–2026)
+
+🏫 12th - Govt. Excellence School
+Percentage: 71.4% (2021–2022)
+
+🏫 10th - Govt. Excellence School
+Percentage: 85.3% (2019–2020)
       `
     },
+
+    certs: {
+      description: 'View certifications',
+      usage: 'certs',
+      fn: () => `
+📜 Certifications
+
+• Java Programming Fundamentals – Infosys Springboard
+• Introduction to Cybersecurity – Cisco Networking Academy
+      `
+    },
+
     echo: {
       description: 'Echo a passed string.',
       usage: 'echo <string>',
@@ -152,26 +167,26 @@ Use 'cd <folder>' to navigate
 
   const welcomeMessage = `
 ╔════════════════════════════════════════════════════════╗
-║        Welcome to Masood's Portfolio CLI              ║
+║   Welcome to Pradeep Rathore's Portfolio CLI          ║
 ║                                                        ║
-║  Type 'help' to see all available commands            ║
-║  Type 'about' to learn about me                       ║
-║  Type 'projects' to view my work                      ║
+║  Type 'help' to explore commands                      ║
+║  Type 'about' to know me                              ║
+║  Type 'projects' to view work                         ║
 ║                                                        ║
-║  Enjoy exploring! 🚀                                   ║
+║  Full Stack Developer 🚀                              ║
 ╚════════════════════════════════════════════════════════╝
   `
 
   return (
-    <Macwindow windowName={windowName}  setwindowstate={setwindowstate}>
-        <div className="cli">
-            <Terminal
-              commands={commands}
-              welcomeMessage={welcomeMessage}
-              promptLabel={'masood@portfolio:~$'}
-              promptLabelStyle={{ color: '#00ff00' }}
-            />
-        </div>
+    <Macwindow windowName={windowName} setwindowstate={setwindowstate}>
+      <div className="cli">
+        <Terminal
+          commands={commands}
+          welcomeMessage={welcomeMessage}
+          promptLabel={'pradeep@portfolio:~$'}
+          promptLabelStyle={{ color: '#00ff00' }}
+        />
+      </div>
     </Macwindow>
   )
 }
